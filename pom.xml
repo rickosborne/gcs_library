@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.trollworks.gcslibrary</groupId>
+    <artifactId>gcs-library</artifactId>
+    <version>4.13.5</version>
+    <name>gcs-library</name>
+    <description>GURPS Character Sheet Data Library</description>
+    <properties>
+        <maven.compiler.target>13</maven.compiler.target>
+        <maven.compiler.source>13</maven.compiler.source>
+        <maven.compiler.release>13</maven.compiler.release>
+        <java.version>13</java.version>
+    </properties>
+    <build>
+        <sourceDirectory>src</sourceDirectory>
+        <resources>
+            <resource>
+                <directory>Library</directory>
+            </resource>
+        </resources>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.0</version>
+                <configuration>
+                    <release>13</release>
+                    <compilerArgs>
+                        --enable-preview
+                    </compilerArgs>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    <developers>
+        <developer>
+            <name>Richard A. Wilkes</name>
+            <email>wilkes@me.com</email>
+        </developer>
+    </developers>
+    <scm>
+        <connection>scm:git:https://github.com/rickosborne/gcs_library.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com/rickosborne/gcs_library.git</developerConnection>
+        <url>https://github.com/rickosborne/gcs_library.git</url>
+        <tag>master</tag>
+    </scm>
+
+    <repositories>
+        <repository>
+            <id>github-rickosborne-gcs-library</id>
+            <name>GitHub rickosborne/gcs_library Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/rickosborne/gcs_library</url>
+        </repository>
+    </repositories>
+
+    <distributionManagement>
+        <repository>
+            <id>github-rickosborne-gcs-library</id>
+            <name>GitHub rickosborne/gcs_library Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/rickosborne/gcs_library</url>
+        </repository>
+    </distributionManagement>
+
+</project>
